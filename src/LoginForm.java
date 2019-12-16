@@ -10,6 +10,14 @@ import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
+//Projekt 2_2 ne Java 2
+//Informatike viti III
+//Data e marrjes së projektit : 3.12.2019
+//Data e dorëzimit të projektit : 15.12.2019
+//Ky program ben te mundur leximin nga nje skedar text, afishimin,shtimin e rreshtave nga perdoruesi
+//me ane te menyse perzgjedhese.
+//Punuan Gjovalin Deda,Eljona Arrinaj,Klevisa Zekaj, Gledis Kapidani
+
 public class LoginForm extends JFrame implements ActionListener{
  JLabel l1, l2, l3;
  JTextField tf1;
@@ -17,7 +25,7 @@ public class LoginForm extends JFrame implements ActionListener{
  JPasswordField p1;
  LoginForm() {
   JFrame frame = new JFrame("Login Form");
-  l1 = new JLabel("Login Form");
+  l1 = new JLabel("Identifikohuni");
   l1.setForeground(Color.blue);
   l1.setFont(new Font("Serif", Font.BOLD, 20));
 
@@ -46,10 +54,9 @@ public class LoginForm extends JFrame implements ActionListener{
             	   {
             		  
             		   
-            		   
+            		   //mbyllet dritarja e logimit dhe hapet dritarja e klases se re per manipulimin eskedarit
             		   TextAreaLoad Text1 = new TextAreaLoad();
-            		   //me vu kodin
-            	   //System.out.println("butoni punoi") ;
+            		   frame.setVisible(false);
             	   }else
             	    {
             		      JOptionPane.showMessageDialog(LoginForm.this,"Incorrect login or password",
@@ -67,7 +74,7 @@ public class LoginForm extends JFrame implements ActionListener{
   frame.add(p1);
   frame.add(btn1);
 
-  frame.setSize(800, 400);
+  frame.setSize(600, 300);
   frame.setLayout(null);
   frame.setVisible(true);
  }
@@ -75,4 +82,10 @@ public class LoginForm extends JFrame implements ActionListener{
  public static void main(String[] args) {
   new LoginForm();
  }
+
+@Override
+public void actionPerformed(ActionEvent e) {
+	// TODO Auto-generated method stub
+	
+}
 }
